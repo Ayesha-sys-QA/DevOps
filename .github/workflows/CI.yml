@@ -1,31 +1,30 @@
 name: CI
 
 on:
-  FILL:
+  push:
+    branches: [ main ]
+  pull_request:
     branches: [ main ]
 
 jobs:
   test:
-    name: Test on Node.js 
-    runs-on: FILL
+    name: Test on Node.js
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: FILL
+      - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Use Node.js
-        uses: FILL
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: FILL
+          node-version: 18
           cache: 'npm'
 
       - name: Install dependencies
-        run: FILL
+        run: npm install
 
       - name: Run tests
-        run: FILL
+        run: npm test
         env:
           CI: true
-
-    
-     
