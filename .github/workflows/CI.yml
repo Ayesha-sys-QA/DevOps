@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  FILL:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Test on Node.js 
+    runs-on: FILL
+
+    steps:
+      - name: Checkout
+        uses: FILL
+
+      - name: Use Node.js
+        uses: FILL
+        with:
+          node-version: FILL
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: FILL
+
+      - name: Run tests
+        run: FILL
+        env:
+          CI: true
+
+    
+     
