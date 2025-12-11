@@ -1,0 +1,11 @@
+name: Deploy Simulation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate deployment
+        run: echo "🚀 Deploying version... OK"
